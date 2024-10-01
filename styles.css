@@ -1,0 +1,287 @@
+/* Reset some basic styles */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Freckle Face', cursive;
+    color: #fff;
+    background-image: url('Untitled\ \(1000\ x\ 1500\ px\)\ copy.jpg'); /* Replace with your moon-themed image */
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.navbar:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: bounce 2s infinite;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #FFD700; /* Gold color */
+    text-decoration: none;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFD700;
+    transition: width 0.4s, background-color 0.4s;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+    background-color: #fff;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.cta-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.cta-button:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.294);
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.mascot {
+    margin-top: 30px;
+}
+
+.mascot img {
+    border-radius: 50%;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translatey(0);
+    }
+    50% {
+        transform: translatey(-10px);
+    }
+    100% {
+        transform: translatey(0);
+    }
+}
+
+/* Styles for Features Section */
+.features-section {
+    padding: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.feature {
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.294);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+}
+
+/* Styles for Roadmap Section */
+.roadmap-section {
+    padding: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.294);
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+.roadmap-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.roadmap-section li {
+    margin: 10px 0;
+}
+
+/* Styles for Contact Section */
+.contact-section {
+    padding: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.294);
+    border-radius: 15px;
+    margin: 20px 0;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+    background: #FFD700;
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.contact-section button:hover {
+    transform: scale(1.1);
+}
+
+/* Styles for Socials Section */
+.socials-section {
+    padding: 50px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.294);
+    margin: 20px 0;
+    border-radius: 15px;
+}
+
+.socials-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: #FFD700; /* Gold color */
+    text-decoration: none;
+    margin: 10px 0;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+html {
+    scroll-behavior: smooth;
+}
